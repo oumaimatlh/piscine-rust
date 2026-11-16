@@ -6,9 +6,14 @@ version = 4
 name = "Piscine-Rust"
 version = "0.1.0"
 dependencies = [
+ "find_factorial",
  "groceries",
  "reverse_string",
 ]
+
+[[package]]
+name = "find_factorial"
+version = "0.1.0"
 
 [[package]]
 name = "groceries"
