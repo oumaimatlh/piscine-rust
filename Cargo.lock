@@ -6,19 +6,9 @@ version = 4
 name = "Piscine-Rust"
 version = "0.1.0"
 dependencies = [
- "scalar",
- "speed_transformation",
- "temperature_conv",
+ "groceries",
 ]
 
 [[package]]
-name = "scalar"
-version = "0.1.0"
-
-[[package]]
-name = "speed_transformation"
-version = "0.1.0"
-
-[[package]]
-name = "temperature_conv"
+name = "groceries"
 version = "0.1.0"
