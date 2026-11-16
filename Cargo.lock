@@ -6,12 +6,17 @@ version = 4
 name = "Piscine-Rust"
 version = "0.1.0"
 dependencies = [
+ "division_and_remainder",
  "fibonacci2",
  "find_factorial",
  "groceries",
  "matrix_transposition",
  "reverse_string",
 ]
+
+[[package]]
+name = "division_and_remainder"
+version = "0.1.0"
 
 [[package]]
 name = "fibonacci2"
