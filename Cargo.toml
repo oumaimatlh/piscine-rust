@@ -1,6 +1,7 @@
 [package]
-name = "piscine-rust"
+name = "Piscine-Rust"
 version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+scalar = { path = "scalar" }
