@@ -9,6 +9,7 @@ dependencies = [
  "fibonacci2",
  "find_factorial",
  "groceries",
+ "matrix_transposition",
  "reverse_string",
 ]
 
@@ -22,6 +23,10 @@ version = "0.1.0"
 
 [[package]]
 name = "groceries"
+version = "0.1.0"
+
+[[package]]
+name = "matrix_transposition"
 version = "0.1.0"
 
 [[package]]
