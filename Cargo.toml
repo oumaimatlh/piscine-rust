@@ -6,3 +6,4 @@ edition = "2024"
 [dependencies]
 
 groceries = {path = "groceries"}
+reverse_string = {path = "reverse_string"}

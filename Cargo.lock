@@ -7,8 +7,13 @@ name = "Piscine-Rust"
 version = "0.1.0"
 dependencies = [
  "groceries",
+ "reverse_string",
 ]
 
 [[package]]
 name = "groceries"
+version = "0.1.0"
+
+[[package]]
+name = "reverse_string"
 version = "0.1.0"
