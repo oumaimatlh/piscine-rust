@@ -6,10 +6,15 @@ version = 4
 name = "Piscine-Rust"
 version = "0.1.0"
 dependencies = [
+ "fibonacci2",
  "find_factorial",
  "groceries",
  "reverse_string",
 ]
+
+[[package]]
+name = "fibonacci2"
+version = "0.1.0"
 
 [[package]]
 name = "find_factorial"
