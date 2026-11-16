@@ -12,6 +12,7 @@ dependencies = [
  "groceries",
  "matrix_transposition",
  "reverse_string",
+ "tuples_refs",
 ]
 
 [[package]]
@@ -36,4 +37,8 @@ version = "0.1.0"
 
 [[package]]
 name = "reverse_string"
+version = "0.1.0"
+
+[[package]]
+name = "tuples_refs"
 version = "0.1.0"

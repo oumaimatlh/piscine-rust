@@ -1,14 +1,7 @@
-pub fn add(left: u64, right: u64) -> u64 {
-    left + right
-}
+pub struct Student(pub u32, pub String, pub String);
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+pub fn id(student: &Student) -> u32 {student.0}
 
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
-}
+pub fn first_name(student: &Student) -> &str {&student.1}
+
+pub fn last_name(student: &Student) -> &str {&student.2}
