@@ -15,3 +15,4 @@ tuples_refs = {path = "tuples_refs"}
 borrow = {path = "borrow"}
 doubtful = {path = "doubtful"}
 to_url = {path = "to_url"}
+string_literals = {path = "string_literals"}
