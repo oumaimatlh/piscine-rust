@@ -13,6 +13,7 @@ dependencies = [
  "find_factorial",
  "groceries",
  "matrix_transposition",
+ "name_initials",
  "reverse_string",
  "string_literals",
  "to_url",
@@ -45,6 +46,10 @@ version = "0.1.0"
 
 [[package]]
 name = "matrix_transposition"
+version = "0.1.0"
+
+[[package]]
+name = "name_initials"
 version = "0.1.0"
 
 [[package]]
