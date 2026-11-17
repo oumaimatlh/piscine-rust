@@ -7,7 +7,6 @@ pub fn initials(names: Vec<&str>) -> Vec<String> {
         for i in 0..split.len() {
             s.push(split[i].chars().next().unwrap());
             s.push('.');
-
             if i == split.len() - 1 {
                 continue;
             } 
