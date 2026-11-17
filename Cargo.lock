@@ -6,6 +6,7 @@ version = 4
 name = "Piscine-Rust"
 version = "0.1.0"
 dependencies = [
+ "borrow",
  "division_and_remainder",
  "fibonacci2",
  "find_factorial",
@@ -14,6 +15,10 @@ dependencies = [
  "reverse_string",
  "tuples_refs",
 ]
+
+[[package]]
+name = "borrow"
+version = "0.1.0"
 
 [[package]]
 name = "division_and_remainder"
