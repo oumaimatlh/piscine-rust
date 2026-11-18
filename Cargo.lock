@@ -6,6 +6,7 @@ version = 4
 name = "Piscine-Rust"
 version = "0.1.0"
 dependencies = [
+ "arrange_it",
  "borrow",
  "borrow_me_the_reference",
  "copy",
@@ -23,6 +24,10 @@ dependencies = [
  "to_url",
  "tuples_refs",
 ]
+
+[[package]]
+name = "arrange_it"
+version = "0.1.0"
 
 [[package]]
 name = "borrow"
