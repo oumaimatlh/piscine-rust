@@ -22,5 +22,5 @@ pub fn arrange_phrase(phrase: &str) -> String {
         }
     }
 
-    r
+    r.trim()
 }
