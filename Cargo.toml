@@ -30,3 +30,5 @@ copy = {path = "copy"}
 
 changes = {path = "changes"}
 circle = {path = "circle"}
+card_deck = {path = "card_deck"}
+rand = "0.10.4"
