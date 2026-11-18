@@ -7,6 +7,7 @@ name = "Piscine-Rust"
 version = "0.1.0"
 dependencies = [
  "borrow",
+ "copy",
  "division_and_remainder",
  "doubtful",
  "fibonacci2",
@@ -23,6 +24,10 @@ dependencies = [
 
 [[package]]
 name = "borrow"
+version = "0.1.0"
+
+[[package]]
+name = "copy"
 version = "0.1.0"
 
 [[package]]
