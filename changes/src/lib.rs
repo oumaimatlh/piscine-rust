@@ -15,7 +15,6 @@ impl Light {
 
 pub fn change_brightness(lights: &mut [Light], alias: &str, value: u8) {
     for a in lights {
-        
         if a.alias == alias.to_string() {
             a.brightness = value;
         }

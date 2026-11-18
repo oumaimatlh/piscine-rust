@@ -8,6 +8,7 @@ version = "0.1.0"
 dependencies = [
  "borrow",
  "changes",
+ "circle",
  "copy",
  "division_and_remainder",
  "doubtful",
@@ -29,6 +30,10 @@ version = "0.1.0"
 
 [[package]]
 name = "changes"
+version = "0.1.0"
+
+[[package]]
+name = "circle"
 version = "0.1.0"
 
 [[package]]
