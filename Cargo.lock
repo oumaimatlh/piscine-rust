@@ -19,6 +19,7 @@ dependencies = [
  "ownership",
  "reverse_string",
  "string_literals",
+ "tic_tac_toe",
  "to_url",
  "tuples_refs",
 ]
@@ -73,6 +74,10 @@ version = "0.1.0"
 
 [[package]]
 name = "string_literals"
+version = "0.1.0"
+
+[[package]]
+name = "tic_tac_toe"
 version = "0.1.0"
 
 [[package]]
