@@ -11,20 +11,12 @@ pub fn capitalize_first(input: &str) -> String {
     result
 }
 pub fn title_case(input: &str) -> String {
-    let mut result=String::from("");
-    let  mut i=0;
-    let charf:Vec<char>=input.chars().collect();
-    while i<charf.len(){
-        if i==0||charf[i-1]==' '||charf[i-1].is_whitespace(){
-            result.push(charf[i].to_ascii_uppercase());
-        }else{
-            result.push(charf[i]);
-        }
-        i+=1;
+    let mut split = input.split_inclusive(char::is_whitespace).map(|s| s.to_string()).collect::<Vec<String>>();
+    for value in &mut split {
+        *value = capitalize_first(value);
     }
-    result
+    split.join("")
 }
-
 
 pub fn change_case(input: &str) -> String {
     let mut new_string = String::new();
