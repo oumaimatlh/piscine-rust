@@ -7,14 +7,12 @@ name = "Piscine-Rust"
 version = "0.1.0"
 dependencies = [
  "arrange_it",
+ "arrays",
  "borrow",
-<<<<<<< HEAD
  "borrow_me_the_reference",
-=======
  "card_deck",
  "changes",
  "circle",
->>>>>>> data
  "copy",
  "division_and_remainder",
  "doubtful",
@@ -37,7 +35,15 @@ name = "arrange_it"
 version = "0.1.0"
 
 [[package]]
+name = "arrays"
+version = "0.1.0"
+
+[[package]]
 name = "borrow"
+version = "0.1.0"
+
+[[package]]
+name = "borrow_me_the_reference"
 version = "0.1.0"
 
 [[package]]
