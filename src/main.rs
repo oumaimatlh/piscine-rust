@@ -1,7 +1,13 @@
-use capitalizing::*;
+use edit_distance::*;
 
 fn main() {
-    println!("{}", capitalize_first("joe is missing"));
-    println!("{}", title_case("jill \nis leaving\t A"));
-    println!("{}", change_case("heLLo /Here"));
+    let source = "alignment";
+    let target = "assignment";
+
+    println!(
+        "It's necessary to make {} change(s) to {:?} to get {:?}",
+        edit_distance(source, target),
+        source,
+        target
+    );
 }
