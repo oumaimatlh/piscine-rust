@@ -1,5 +1,17 @@
-use arrange_it::*;
+use card_deck::*;
 
 fn main() {
-    println!("{}", arrange_phrase("is2 Thi1s T4est 3a"));
+    let your_card = Card {
+        rank: Rank::random(),
+        suit: Suit::random(),
+    };
+
+    println!("Your card is {:?}", &your_card);
+
+    if card_deck::winner_card(&your_card) {
+        println!("You are the winner!");
+    }
 }
+// $ cargo run
+// Your card is Card { suit: Club, rank: Ace }
+// $
