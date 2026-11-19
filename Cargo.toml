@@ -28,3 +28,4 @@ card_deck = {path = "card_deck"}
 rand = "0.10.4"
 arrays = {path = "arrays"}
 strings = {path = "strings"}
+capitalizing = {path = "capitalizing"}

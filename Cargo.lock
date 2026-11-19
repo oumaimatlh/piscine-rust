@@ -10,6 +10,7 @@ dependencies = [
  "arrays",
  "borrow",
  "borrow_me_the_reference",
+ "capitalizing",
  "card_deck",
  "changes",
  "circle",
@@ -45,6 +46,10 @@ version = "0.1.0"
 
 [[package]]
 name = "borrow_me_the_reference"
+version = "0.1.0"
+
+[[package]]
+name = "capitalizing"
 version = "0.1.0"
 
 [[package]]
