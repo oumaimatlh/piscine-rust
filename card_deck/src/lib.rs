@@ -1,4 +1,4 @@
-use rand::RngExt;
+use rand::Rng;
 
 #[derive(Debug, PartialEq, Copy, Clone)]
 pub enum Suit {
@@ -19,8 +19,8 @@ pub enum Rank {
 
 impl Suit {
     pub fn random() -> Suit {
-        let mut rng = rand::rng();
-        let n = rng.random_range(0..=3); 
+        let mut rng = rand::thread_rng();
+        let n = rng.gen_range(0..=3); 
         [Suit::Heart, Suit::Diamond, Suit::Spade, Suit::Club][n]
     }
 
@@ -36,10 +36,10 @@ impl Suit {
 
 impl Rank {
     pub fn random() -> Rank {
-        let mut rng = rand::rng();
-        let rank = rng.random_range(0..=4);
+        let mut rng = rand::thread_rng();
+        let rank = rng.gen_range(0..=4);
 
-        let n = rng.random_range(2..=10);
+        let n = rng.gen_range(2..=10);
         [Rank::Ace, Rank::King, Rank::Queen, Rank::Jack, Rank::Number(n)][rank]
     }
 
