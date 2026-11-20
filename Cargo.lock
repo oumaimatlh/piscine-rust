@@ -8,6 +8,7 @@ version = "0.1.0"
 dependencies = [
  "arrange_it",
  "arrays",
+ "bigger",
  "borrow",
  "borrow_me_the_reference",
  "capitalizing",
@@ -26,6 +27,7 @@ dependencies = [
  "ownership",
  "rand 0.10.4",
  "reverse_string",
+ "simple_hash",
  "string_literals",
  "strings",
  "tic_tac_toe",
@@ -39,6 +41,10 @@ version = "0.1.0"
 
 [[package]]
 name = "arrays"
+version = "0.1.0"
+
+[[package]]
+name = "bigger"
 version = "0.1.0"
 
 [[package]]
@@ -245,6 +251,10 @@ checksum = "63b8176103e19a2643978565ca18b50549f6101881c443590420e4dc998a3c69"
 
 [[package]]
 name = "reverse_string"
+version = "0.1.0"
+
+[[package]]
+name = "simple_hash"
 version = "0.1.0"
 
 [[package]]

@@ -1,13 +1,16 @@
-use edit_distance::*;
+use bigger::*;
+use std::collections::HashMap;
 
 fn main() {
-    let source = "alignment";
-    let target = "assignment";
+    let hash = HashMap::from_iter([
+        ("Daniel", 122),
+        ("Ashley", 333),
+        ("Katie", 334),
+        ("Robert", 14),
+    ]);
 
     println!(
-        "It's necessary to make {} change(s) to {:?} to get {:?}",
-        edit_distance(source, target),
-        source,
-        target
+        "The biggest of the elements in the HashMap is {}",
+        bigger(hash)
     );
 }
