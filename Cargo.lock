@@ -29,6 +29,7 @@ dependencies = [
  "reverse_string",
  "simple_hash",
  "string_literals",
+ "string_permutation",
  "strings",
  "tic_tac_toe",
  "to_url",
@@ -259,6 +260,10 @@ version = "0.1.0"
 
 [[package]]
 name = "string_literals"
+version = "0.1.0"
+
+[[package]]
+name = "string_permutation"
 version = "0.1.0"
 
 [[package]]
