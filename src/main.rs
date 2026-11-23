@@ -1,8 +1,14 @@
-use unwrap_or_expect::*;
+use panic::*;
+use std::fs::{self, File};
 
 fn main() {
-    println!("{}", fetch_data(Ok("server1.com"), Security::Warning));
-    println!("{}", fetch_data(Err("server.com"), Security::Warning));
-    println!("{}", fetch_data(Err("server2.com"), Security::NotFound));
+    let filename = "created.txt";
+    File::create(filename).unwrap();
 
+    println!("{:?}", open_file(filename));
+
+    fs::remove_file(filename).unwrap();
+
+    // this should panic!
+    // open_file(filename);
 }

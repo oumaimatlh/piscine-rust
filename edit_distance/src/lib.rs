@@ -2,7 +2,7 @@ pub fn edit_distance(source: &str, target: &str) -> usize {
     let mut count: usize = 0;
     if source.len() > target.len() {
         count += source.len() - target.len();
-    }else source.len() < target.len() {
+    }else if source.len() < target.len() {
         count += target.len() - source.len();
 
     }
