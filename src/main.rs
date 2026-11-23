@@ -1,15 +1,8 @@
 use question_mark::*;
 
 fn main() {
-    let a = One {
-        first_layer: Some(Two {
-            second_layer: Some(Three {
-                third_layer: Some(Four {
-                    fourth_layer: Some(1000)
-                })
-            })
-        })
-    };
+   let d = Flag::opt_flag("diff", "gives the difference between two numbers");
+    println!("short hand: {}, long hand: {}, description: {}", d.short_hand, d.long_hand, d.desc);
+    // output: "short hand: -d, long hand: --diff, description: gives the difference between two numbers"
 
-    println!("{:?}", a.get_fourth_layer());
 }
