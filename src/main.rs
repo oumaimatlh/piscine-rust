@@ -1,17 +1,8 @@
-use card_deck::*;
+use unwrap_or_expect::*;
 
 fn main() {
-    let your_card = Card {
-        rank: Rank::random(),
-        suit: Suit::random(),
-    };
+    println!("{}", fetch_data(Ok("server1.com"), Security::Warning));
+    println!("{}", fetch_data(Err("server.com"), Security::Warning));
+    println!("{}", fetch_data(Err("server2.com"), Security::NotFound));
 
-    println!("Your card is {:?}", &your_card);
-
-    if card_deck::winner_card(&your_card) {
-        println!("You are the winner!");
-    }
 }
-// $ cargo run
-// Your card is Card { suit: Club, rank: Ace }
-// $
