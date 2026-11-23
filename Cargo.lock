@@ -27,6 +27,7 @@ dependencies = [
  "ownership",
  "panic",
  "profanity_filter",
+ "question_mark",
  "rand 0.10.4",
  "reverse_string",
  "string_literals",
@@ -195,6 +196,10 @@ dependencies = [
 
 [[package]]
 name = "profanity_filter"
+version = "0.1.0"
+
+[[package]]
+name = "question_mark"
 version = "0.1.0"
 
 [[package]]

@@ -1,7 +1,15 @@
-use profanity_filter::*;
+use question_mark::*;
 
 fn main() {
-    ["hello there", "", "you are stupid", "stupid"]
-        .into_iter()
-        .for_each(|m| println!("{:?}", check_ms(m)));
+    let a = One {
+        first_layer: Some(Two {
+            second_layer: Some(Three {
+                third_layer: Some(Four {
+                    fourth_layer: Some(1000)
+                })
+            })
+        })
+    };
+
+    println!("{:?}", a.get_fourth_layer());
 }
