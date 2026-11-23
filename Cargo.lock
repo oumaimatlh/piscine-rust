@@ -31,6 +31,7 @@ dependencies = [
  "tic_tac_toe",
  "to_url",
  "tuples_refs",
+ "unwrap_or_expect",
 ]
 
 [[package]]
@@ -309,3 +310,5 @@ dependencies = [
  "quote",
  "syn",
 ]
+name = "unwrap_or_expect"
+version = "0.1.0"

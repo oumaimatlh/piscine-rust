@@ -1,13 +1,8 @@
-use edit_distance::*;
+use unwrap_or_expect::*;
 
 fn main() {
-    let source = "alignment";
-    let target = "assignment";
+    println!("{}", fetch_data(Ok("server1.com"), Security::Warning));
+    println!("{}", fetch_data(Err("server.com"), Security::Warning));
+    println!("{}", fetch_data(Err("server2.com"), Security::NotFound));
 
-    println!(
-        "It's necessary to make {} change(s) to {:?} to get {:?}",
-        edit_distance(source, target),
-        source,
-        target
-    );
 }

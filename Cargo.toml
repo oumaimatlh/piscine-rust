@@ -30,3 +30,4 @@ arrays = {path = "arrays"}
 strings = {path = "strings"}
 capitalizing = {path = "capitalizing"}
 edit_distance = {path = "edit_distance"}
+unwrap_or_expect = {path = "unwrap_or_expect"}
