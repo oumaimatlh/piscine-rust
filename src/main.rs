@@ -1,10 +1,7 @@
-use std::fs;
+use profanity_filter::*;
 
 fn main() {
-    let path = "a.txt";
-
-    handling::open_or_create(&path, "dd");
-
-    let contents = fs::read_to_string(path).unwrap();
-    println!("{}", contents);
+    ["hello there", "", "you are stupid", "stupid"]
+        .into_iter()
+        .for_each(|m| println!("{:?}", check_ms(m)));
 }
