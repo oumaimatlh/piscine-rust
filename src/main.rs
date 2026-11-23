@@ -1,14 +1,10 @@
-use panic::*;
-use std::fs::{self, File};
+use std::fs;
 
 fn main() {
-    let filename = "created.txt";
-    File::create(filename).unwrap();
+    let path = "a.txt";
 
-    println!("{:?}", open_file(filename));
+    handling::open_or_create(&path, "dd");
 
-    fs::remove_file(filename).unwrap();
-
-    // this should panic!
-    // open_file(filename);
+    let contents = fs::read_to_string(path).unwrap();
+    println!("{}", contents);
 }

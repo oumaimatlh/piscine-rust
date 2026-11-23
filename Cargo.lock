@@ -21,6 +21,7 @@ dependencies = [
  "fibonacci2",
  "find_factorial",
  "groceries",
+ "handling",
  "matrix_transposition",
  "name_initials",
  "ownership",
@@ -145,6 +146,10 @@ dependencies = [
 
 [[package]]
 name = "groceries"
+version = "0.1.0"
+
+[[package]]
+name = "handling"
 version = "0.1.0"
 
 [[package]]
