@@ -4,4 +4,4 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-banner = {path = "banner"}
+cipher = {path = "cipher"}
