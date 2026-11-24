@@ -6,8 +6,9 @@ version = 4
 name = "Piscine-Rust"
 version = "0.1.0"
 dependencies = [
+ "boxing_todo",
  "chrono",
- "error_types",
+ "json",
 ]
 
 [[package]]
@@ -24,6 +25,13 @@ name = "autocfg"
 version = "1.5.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f2032f911046de80f0a198e0901378627c33f59ea0ac00e363d481118bd70a53"
+
+[[package]]
+name = "boxing_todo"
+version = "0.1.0"
+dependencies = [
+ "json",
+]
 
 [[package]]
 name = "bumpalo"
@@ -65,13 +73,6 @@ name = "core-foundation-sys"
 version = "0.8.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "773648b94d0e5d620f64f280777445740e61fe701025087ec8b57f45c791888b"
-
-[[package]]
-name = "error_types"
-version = "0.1.0"
-dependencies = [
- "chrono",
-]
 
 [[package]]
 name = "find-msvc-tools"
@@ -137,6 +138,12 @@ dependencies = [
  "futures-util",
  "wasm-bindgen",
 ]
+
+[[package]]
+name = "json"
+version = "0.12.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "078e285eafdfb6c4b434e0d31e8cfcb5115b651496faca5749b88fafd4f23bfd"
 
 [[package]]
 name = "libc"

@@ -1,24 +1,47 @@
-use error_types::*;
+use std::{fs::File, io::Write};
+
+use boxing_todo::TodoList;
 
 fn main() {
-    let mut form_output = Form {
-        name: "Lee".to_owned(),
-        password: "qwqwsa1dty_".to_owned(),
-    };
+    let files = [
+        (
+            "todo.json",
+            r#"{
+                "title" : "TODO LIST FOR PISCINE RUST",
+                "tasks": [
+                    { "id": 0, "description": "do this", "level": 0 },
+                    { "id": 1, "description": "do that", "level": 5 }
+                ]
+            }"#,
+        ),
+        (
+            "todo_empty.json",
+            r#"{
+                "title" : "TODO LIST FOR PISCINE RUST",
+                "tasks": []
+            }"#,
+        ),
+        (
+            "malformed_object.json",
+            r#"{
+                "something": ,
+            }"#,
+        ),
+    ];
 
-    println!("{:?}", form_output);
-    println!("{:?}", form_output.validate());
+    for (name, content) in files {
+        File::create(name)
+            .unwrap()
+            .write(content.as_bytes())
+            .unwrap();
 
-    form_output.name = "".to_owned();
-    println!("{:?}", form_output.validate());
-
-    form_output.name = "as".to_owned();
-    form_output.password = "dty_1".to_owned();
-    println!("{:?}", form_output.validate());
-
-    form_output.password = "asdasASd(_".to_owned();
-    println!("{:?}", form_output.validate());
-
-    form_output.password = "asdasASd123SA".to_owned();
-    println!("{:?}", form_output.validate());
+        let todos = TodoList::get_todo(name);
+        match todos {
+            Ok(list) => println!("{:?}", list),
+            Err(e) => {
+                println!("{}: {:?}", e.to_string(), e.source());
+            }
+        }
+    }
 }
+And its output:
