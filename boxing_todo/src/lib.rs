@@ -1,9 +1,11 @@
-mod err;
+
+pub mod err;
+
+use std::error::Error;
+use std::fs;
+use std::io;
 
 pub use err::{ParseErr, ReadErr};
-
-use json::{self, JsonValue};
-use std::{error::Error, fs};
 
 #[derive(Debug, Eq, PartialEq)]
 pub struct Task {
@@ -20,45 +22,83 @@ pub struct TodoList {
 
 impl TodoList {
     pub fn get_todo(path: &str) -> Result<TodoList, Box<dyn Error>> {
-        // read file
+        // 1. Read file
         let content = match fs::read_to_string(path) {
-            Ok(c) => c,
-            Err(e) => return Err(Box::new(ReadErr { child_err: Box::new(e) })),
-        };
-        // parse json !!
-        let parsed_json = match json::parse(&content) {
-            Ok(p) => p,
-            Err(e) => return Err(Box::new(ParseErr::Malformed(Box::new(e)))),
-        };
-
-        let title = match parsed_json["title"].as_str() {
-            Some(t) => t.to_string(),
-            None => return Err(Box::new(ParseErr::Malformed(Box::new(std::io::Error::new(std::io::ErrorKind::InvalidData, "missing title"))))),
+            Ok(data) => data,
+            Err(err) => {
+                return Err(Box::new(ReadErr {
+                    child_err: Box::new(err),
+                }));
+            }
         };
 
-        // members(): iterer sur les elements d'un objet Json  
-        let tasks_json = parsed_json["tasks"].members().collect::<Vec<&JsonValue>>();
-        if tasks_json.is_empty() {
+        // 2. Parse JSON
+        let json = match json::parse(&content) {
+            Ok(data) => data,
+            Err(err) => {
+                return Err(Box::new(ParseErr::Malformed(
+                    Box::new(err)
+                )));
+            }
+        };
+
+        // 3. Read title
+        let title = match json["title"].as_str() {
+            Some(value) => value.to_string(),
+            None => {
+                return Err(Box::new(ParseErr::Malformed(
+                    Box::new(io::Error::new(
+                        io::ErrorKind::InvalidData,
+                        "Invalid title"
+                    ))
+                )));
+            }
+        };
+
+        if !json["tasks"].is_array() {
+            return Err(Box::new(ParseErr::Malformed(
+                Box::new(io::Error::new(
+                    io::ErrorKind::InvalidData,
+                    "Invalid tasks"
+                ))
+            )));
+        }
+
+        let task_values: Vec<_> = json["tasks"].members().collect();
+
+        if task_values.is_empty() {
             return Err(Box::new(ParseErr::Empty));
         }
 
-        let mut tasks: Vec<Task> = Vec::new();
-        for i in tasks_json {
-            let id = match i["id"].as_u32() {
-                Some(i) => i,
-                None => return Err(Box::new(ParseErr::Malformed(Box::new(std::io::Error::new(std::io::ErrorKind::InvalidData, "missing or malformed task id"))))),
-            };
-            let description = match i["description"].as_str() {
-                Some(d) => d.to_string(),
-                None => return Err(Box::new(ParseErr::Malformed(Box::new(std::io::Error::new(std::io::ErrorKind::InvalidData, "missing or malformed task description"))))),
-            };
-            let level = match i["level"].as_u32() {
-                Some(l) => l,
-                None => return Err(Box::new(ParseErr::Malformed(Box::new(std::io::Error::new(std::io::ErrorKind::InvalidData, "missing or malformed task level"))))),
-            }; 
+        let mut tasks = Vec::new();
 
-            tasks.push(Task { id, description, level });
+        for task in task_values {
+            let id = task["id"].as_u32();
+            let description = task["description"].as_str();
+            let level = task["level"].as_u32();
+
+            match (id, description, level) {
+                (Some(id), Some(description), Some(level)) => {
+                    tasks.push(Task {
+                        id,
+                        description: description.to_string(),
+                        level,
+                    });
+                }
+                _ => {
+                    return Err(Box::new(ParseErr::Malformed(
+                        Box::new(io::Error::new(
+                            io::ErrorKind::InvalidData,
+                            "Invalid task fields"
+                        ))
+                    )));
+                }
+            }
         }
-       Ok(TodoList { title, tasks }) 
+
+        Ok(TodoList {
+            title,
+            tasks,
+        })
     }
 }
