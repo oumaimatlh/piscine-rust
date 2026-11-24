@@ -44,4 +44,3 @@ fn main() {
         }
     }
 }
-And its output:
