@@ -1,6 +1,11 @@
 pub fn edit_distance(source: &str, target: &str) -> usize {
     let s: Vec<char> = source.chars().collect();
     let t: Vec<char> = target.chars().collect();
+    let mut count: usize = 0;
+    if source.len() > target.len() {
+        count += source.len() - target.len();
+    }else if source.len() < target.len() {
+        count += target.len() - source.len();
 
     let mut dp = vec![vec![0; t.len() + 1]; s.len() + 1];
 

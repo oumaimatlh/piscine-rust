@@ -1,12 +1,8 @@
-use collect::*;
+use question_mark::*;
 
 fn main() {
-    let mut v = [3, 2, 4, 5, 1, 7, 9, 8];
-    let mut v_clone = v;
+   let d = Flag::opt_flag("diff", "gives the difference between two numbers");
+    println!("short hand: {}, long hand: {}, description: {}", d.short_hand, d.long_hand, d.desc);
+    // output: "short hand: -d, long hand: --diff, description: gives the difference between two numbers"
 
-    bubble_sort(&mut v);
-    println!("{:?}", v);
-
-    v_clone.sort_unstable();
-    println!("{:?}", v_clone);
 }
