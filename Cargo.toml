@@ -4,40 +4,4 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-
-groceries = {path = "groceries"}
-reverse_string = {path = "reverse_string"}
-find_factorial = {path = "find_factorial"}
-fibonacci2 = {path = "fibonacci2"}
-matrix_transposition = {path = "matrix_transposition"}
-division_and_remainder = {path = "division_and_remainder"}
-tuples_refs = {path = "tuples_refs"}
-borrow = {path = "borrow"}
-doubtful = {path = "doubtful"}
-to_url = {path = "to_url"}
-string_literals = {path = "string_literals"}
-name_initials = {path = "name_initials"}
-ownership = {path = "ownership"}
-copy = {path = "copy"}
-borrow_me_the_reference = {path = "borrow_me_the_reference"}
-tic_tac_toe = {path = "tic_tac_toe"}
-arrange_it = {path = "arrange_it"}
-changes = {path = "changes"}
-circle = {path = "circle"}
-card_deck = {path = "card_deck"}
-rand = "0.10.4"
-arrays = {path = "arrays"}
-strings = {path = "strings"}
-capitalizing = {path = "capitalizing"}
-edit_distance = {path = "edit_distance"}
-simple_hash = {path = "simple_hash"}
-bigger = {path = "bigger"}
-string_permutation = {path = "string_permutation"}
-hashing = {path = "hashing"}
-collect = {path = "collect"}
-unwrap_or_expect = {path = "unwrap_or_expect"}
-panic = {path = "panic"}
-handling = {path = "handling"}
-profanity_filter = {path = "profanity_filter"}
-question_mark = {path = "question_mark"}
 banner = {path = "banner"}
