@@ -4,4 +4,5 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-cipher = {path = "cipher"}
+chrono = "0.4.45"
+error_types = {path = "error_types"}
