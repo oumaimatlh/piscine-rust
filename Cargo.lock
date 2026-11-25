@@ -7,8 +7,8 @@ name = "Piscine-Rust"
 version = "0.1.0"
 dependencies = [
  "chrono",
+ "does_it_fit",
  "json",
- "middle_day",
 ]
 
 [[package]]
@@ -66,6 +66,10 @@ name = "core-foundation-sys"
 version = "0.8.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "773648b94d0e5d620f64f280777445740e61fe701025087ec8b57f45c791888b"
+
+[[package]]
+name = "does_it_fit"
+version = "0.1.0"
 
 [[package]]
 name = "find-msvc-tools"
@@ -149,13 +153,6 @@ name = "log"
 version = "0.4.35"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5d15f86d12da44cd8d4ec3c73984537eb7f4cadcb9776a575a0a8a05ca11005c"
-
-[[package]]
-name = "middle_day"
-version = "0.1.0"
-dependencies = [
- "chrono",
-]
 
 [[package]]
 name = "num-traits"

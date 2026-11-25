@@ -1,43 +1,23 @@
-use middle_day::*;
+use does_it_fit::*;
+use does_it_fit::areas_volumes::GeometricalShapes;
+use does_it_fit::areas_volumes::GeometricalVolumes;
 
 fn main() {
-    println!("{:?}", middle_day(1892));
+    println!(
+        "Do 100 rectangles (2x1) fit in a 2 by 4 square? {}",
+        area_fit((2, 4), GeometricalShapes::Rectangle, 100, (2, 1))
+    );
+    println!(
+        "Do 3 triangles (5 base and 3 height) fit in a 5 by 5 square? {}",
+        area_fit((5, 5), GeometricalShapes::Triangle, 3, (5, 3))
+    );
+    println!(
+        "Do 3 spheres (2 radius) fit in a 5 by 5 by 5 box? {}",
+        volume_fit((5, 5, 5), GeometricalVolumes::Sphere, 3, (2, 0, 0))
+    );
+    println!(
+        "Does 1 parallelepiped (6 base, 7 height and depth 4) fit in a 5 by 7 by 5 parallelepiped? {}",
+        volume_fit((5, 7, 5), GeometricalVolumes::Parallelepiped, 1, (6, 7, 4))
+    );
 }
 
-
-/*
-    crate : unite de compilation ;
-        -rust considere main.rs comme la racine d'un crate
-        -ensemble du code que rust compile ensemble enc commencant oar un fichier racine
-        TYpes crates :
-            Binary crate : Executer un programme => executable
-                        -C'est un crate dont l'objectif est de produire un programme que tu peux exécuter.
-            Library crate : Fournir du code réutisable => library
-  
-    src/main.rs — racine du crate
-        déclare les modules
-        Module math
-        src/math.rs
-
-        Module utils
-        src/utils.rs
-
-Les modules sont organisés séparément, mais tous font partie du même crate compilé.
-Depuis la racine du crate actuel
-
-Package = la boîte qui contient ton projet.
-Crate = un programme ou une bibliothèque compilée dans cette boîte.
-Module = les différentes parties organisées à l'intérieur de chaque crate.
-Cargo = l'outil qui gère la boîte, les dépendances et la compilation.
-
-
-Chrono :
-est une crate (bib externe) qui permet de travailler avec dates &&heures
-Avec chrono, tu peux :
-- Récupérer la date et l'heure actuelles.
-- Formater une date sous forme de String.
-- Parser une chaîne de caractères en date.
-- Manipuler les dates et les heures.
-- Gérer les fuseaux horaires (UTC, heure locale, etc.).
-- Comparer deux dates. 
-*/

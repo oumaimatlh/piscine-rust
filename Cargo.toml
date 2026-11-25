@@ -5,5 +5,5 @@ edition = "2024"
 
 [dependencies]
 chrono = "0.4.40"
-middle_day = {path = "middle_day"}
+does_it_fit = {path = "does_it_fit"}
 json = "0.12.4"
