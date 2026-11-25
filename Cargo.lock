@@ -6,9 +6,9 @@ version = 4
 name = "Piscine-Rust"
 version = "0.1.0"
 dependencies = [
- "boxing_todo",
  "chrono",
  "json",
+ "middle_day",
 ]
 
 [[package]]
@@ -25,13 +25,6 @@ name = "autocfg"
 version = "1.5.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f2032f911046de80f0a198e0901378627c33f59ea0ac00e363d481118bd70a53"
-
-[[package]]
-name = "boxing_todo"
-version = "0.1.0"
-dependencies = [
- "json",
-]
 
 [[package]]
 name = "bumpalo"
@@ -156,6 +149,13 @@ name = "log"
 version = "0.4.35"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5d15f86d12da44cd8d4ec3c73984537eb7f4cadcb9776a575a0a8a05ca11005c"
+
+[[package]]
+name = "middle_day"
+version = "0.1.0"
+dependencies = [
+ "chrono",
+]
 
 [[package]]
 name = "num-traits"

@@ -1,46 +1,43 @@
-use std::{fs::File, io::Write};
-
-use boxing_todo::TodoList;
+use middle_day::*;
 
 fn main() {
-    let files = [
-        (
-            "todo.json",
-            r#"{
-                "title" : "TODO LIST FOR PISCINE RUST",
-                "tasks": [
-                    { "id": 0, "description": "do this", "level": 0 },
-                    { "id": 1, "description": "do that", "level": 5 }
-                ]
-            }"#,
-        ),
-        (
-            "todo_empty.json",
-            r#"{
-                "title" : "TODO LIST FOR PISCINE RUST",
-                "tasks": []
-            }"#,
-        ),
-        (
-            "malformed_object.json",
-            r#"{
-                "something": ,
-            }"#,
-        ),
-    ];
-
-    for (name, content) in files {
-        File::create(name)
-            .unwrap()
-            .write(content.as_bytes())
-            .unwrap();
-
-        let todos = TodoList::get_todo(name);
-        match todos {
-            Ok(list) => println!("{:?}", list),
-            Err(e) => {
-                println!("{}: {:?}", e.to_string(), e.source());
-            }
-        }
-    }
+    println!("{:?}", middle_day(1892));
 }
+
+
+/*
+    crate : unite de compilation ;
+        -rust considere main.rs comme la racine d'un crate
+        -ensemble du code que rust compile ensemble enc commencant oar un fichier racine
+        TYpes crates :
+            Binary crate : Executer un programme => executable
+                        -C'est un crate dont l'objectif est de produire un programme que tu peux exécuter.
+            Library crate : Fournir du code réutisable => library
+  
+    src/main.rs — racine du crate
+        déclare les modules
+        Module math
+        src/math.rs
+
+        Module utils
+        src/utils.rs
+
+Les modules sont organisés séparément, mais tous font partie du même crate compilé.
+Depuis la racine du crate actuel
+
+Package = la boîte qui contient ton projet.
+Crate = un programme ou une bibliothèque compilée dans cette boîte.
+Module = les différentes parties organisées à l'intérieur de chaque crate.
+Cargo = l'outil qui gère la boîte, les dépendances et la compilation.
+
+
+Chrono :
+est une crate (bib externe) qui permet de travailler avec dates &&heures
+Avec chrono, tu peux :
+- Récupérer la date et l'heure actuelles.
+- Formater une date sous forme de String.
+- Parser une chaîne de caractères en date.
+- Manipuler les dates et les heures.
+- Gérer les fuseaux horaires (UTC, heure locale, etc.).
+- Comparer deux dates. 
+*/

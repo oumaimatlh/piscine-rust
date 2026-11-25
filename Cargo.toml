@@ -4,6 +4,6 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-chrono = "0.4.45"
-boxing_todo = {path = "boxing_todo"}
+chrono = "0.4.40"
+middle_day = {path = "middle_day"}
 json = "0.12.4"
