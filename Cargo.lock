@@ -8,7 +8,7 @@ version = "0.1.0"
 dependencies = [
  "chrono",
  "json",
- "pangram",
+ "talking",
 ]
 
 [[package]]
@@ -160,10 +160,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "pangram"
-version = "0.1.0"
-
-[[package]]
 name = "pin-project-lite"
 version = "0.2.18"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -226,6 +222,10 @@ dependencies = [
  "quote",
  "unicode-ident",
 ]
+
+[[package]]
+name = "talking"
+version = "0.1.0"
 
 [[package]]
 name = "unicode-ident"
