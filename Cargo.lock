@@ -8,7 +8,7 @@ version = "0.1.0"
 dependencies = [
  "chrono",
  "json",
- "talking",
+ "logic_number",
 ]
 
 [[package]]
@@ -151,6 +151,10 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5d15f86d12da44cd8d4ec3c73984537eb7f4cadcb9776a575a0a8a05ca11005c"
 
 [[package]]
+name = "logic_number"
+version = "0.1.0"
+
+[[package]]
 name = "num-traits"
 version = "0.2.19"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -222,10 +226,6 @@ dependencies = [
  "quote",
  "unicode-ident",
 ]
-
-[[package]]
-name = "talking"
-version = "0.1.0"
 
 [[package]]
 name = "unicode-ident"
