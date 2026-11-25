@@ -5,5 +5,5 @@ edition = "2024"
 
 [dependencies]
 chrono = "0.4.40"
-stars = {path = "stars"}
+scores = {path = "scores"}
 json = "0.12.4"
