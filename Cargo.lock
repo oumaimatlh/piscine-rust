@@ -8,7 +8,7 @@ version = "0.1.0"
 dependencies = [
  "chrono",
  "json",
- "macro_calculator",
+ "stars",
 ]
 
 [[package]]
@@ -151,13 +151,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5d15f86d12da44cd8d4ec3c73984537eb7f4cadcb9776a575a0a8a05ca11005c"
 
 [[package]]
-name = "macro_calculator"
-version = "0.1.0"
-dependencies = [
- "json",
-]
-
-[[package]]
 name = "num-traits"
 version = "0.2.19"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -207,6 +200,10 @@ name = "slab"
 version = "0.4.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0c790de23124f9ab44544d7ac05d60440adc586479ce501c1d6d7da3cd8c9cf5"
+
+[[package]]
+name = "stars"
+version = "0.1.0"
 
 [[package]]
 name = "syn"
