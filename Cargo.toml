@@ -5,5 +5,5 @@ edition = "2024"
 
 [dependencies]
 chrono = "0.4.40"
-rgb_match = {path = "rgb_match"}
+pig_latin = {path = "pig_latin"}
 json = "0.12.4"
