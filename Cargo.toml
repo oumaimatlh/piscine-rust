@@ -5,5 +5,5 @@ edition = "2024"
 
 [dependencies]
 chrono = "0.4.40"
-logic_number = {path = "logic_number"}
+rot = {path = "rot"}
 json = "0.12.4"
