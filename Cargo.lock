@@ -8,7 +8,7 @@ version = "0.1.0"
 dependencies = [
  "chrono",
  "json",
- "ordinal",
+ "pangram",
 ]
 
 [[package]]
@@ -160,7 +160,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "ordinal"
+name = "pangram"
 version = "0.1.0"
 
 [[package]]

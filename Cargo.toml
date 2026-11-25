@@ -5,5 +5,5 @@ edition = "2024"
 
 [dependencies]
 chrono = "0.4.40"
-ordinal = {path = "ordinal"}
+pangram = {path = "pangram"}
 json = "0.12.4"
