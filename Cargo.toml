@@ -5,5 +5,5 @@ edition = "2024"
 
 [dependencies]
 chrono = "0.4.40"
-pig_latin = {path = "pig_latin"}
+scytale_cipher = {path = "scytale_cipher"}
 json = "0.12.4"
